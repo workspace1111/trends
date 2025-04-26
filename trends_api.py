@@ -7,7 +7,7 @@ app = Flask(__name__)
 def trending():
     try:
         pytrends = TrendReq(hl='tr-TR', tz=180)
-        trending_searches = pytrends.trending_searches(pn='turkey')
+        trending_searches = pytrends.trending_searches(pn='united_states')
         results = []
         for i, row in trending_searches.iterrows():
             results.append({"name": row[0]})
